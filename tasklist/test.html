@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Чат-приложение</title>
+  <style>
+  </style>
+</head>
+<body>
+    <input type="text" id="task-input" placeholder="Добавить новую задачу">
+<button id="add-task">Добавить</button>
+<ul id="task-list"></ul>
+  <script>
+    const taskInput = document.getElementById('task-input');
+const addTaskButton = document.getElementById('add-task');
+const taskList = document.getElementById('task-list');
+
+function addTask() {
+  const taskText = taskInput.value.trim();
+  if (taskText !== '') {
+    const taskItem = document.createElement('li');
+    const taskCheckbox = document.createElement('input');
+    taskCheckbox.type = 'checkbox';
+    taskCheckbox.addEventListener('change', toggleTaskStatus);
+    const taskLabel = document.createElement('label');
+    taskLabel.textContent = taskText;
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Удалить';
+    deleteButton.addEventListener('click', deleteTask);
+    taskItem.appendChild(taskCheckbox);
+    taskItem.appendChild(taskLabel);
+    taskItem.appendChild(deleteButton);
+    taskList.appendChild(taskItem);
+    taskInput.value = '';
+  }
+}
+
+function toggleTaskStatus(event) {
+  const taskItem = event.target.parentNode;
+  taskItem.classList.toggle('completed');
+}
+
+function deleteTask(event) {
+  const taskItem = event.target.parentNode;
+  taskList.removeChild(taskItem);
+}
+
+addTaskButton.addEventListener('click', addTask);
+  </script>
+</body>
+</html>

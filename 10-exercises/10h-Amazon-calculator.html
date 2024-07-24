@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>With css</title>
+    <link rel="stylesheet" href="10h-Amazon-calculator.css">
+    <style></style>
+</head>
+<body>
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping</p>
+    <p>Orders over $40 = FREE shipping</p>
+    
+    
+    <input placeholder="Cost of order" class="js-cost-input cost-input" onkeydown="
+        costKeydown(event);
+        console.log(event.key);
+    ">
+    
+    
+    <button onclick="
+        calculateTotal();
+    " class="calculationButton">Calculate</button>
+    <p class="js-total-cost"></p>
+
+    <p class="Error"></p>
+
+
+    <p class="Youtube">YouTube Subscribe Button</p>
+    <button onclick="
+        subscribe();
+    " class="subButton subscribe-button">Subscribe</button>
+
+
+    <script src = "10h-Amazon-calculator.js">
+        inputElement.value
+    </script>
+</body>
+</html>

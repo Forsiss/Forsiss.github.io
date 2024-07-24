@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="css.css" />
+    <link rel="stylesheet" href="09-dom.js" />
+  </head>
+  <body>
+    
+
+    <p>Rock Paper Scissors</p>
+
+    <button onclick="
+      playGame('rock')
+    " title = "Cumen" class = "Rock">Rock</button>
+    <button onclick="
+      playGame('paper');
+    " title="Bumaga" class="Paper">Paper</button>
+    <button onclick="
+      playGame('scissors');
+    " title="Nojnici" class="Scissors">Scissors
+    </button>
+    
+    <p class="js-moves"></p>
+    <p class="js-score"></p>
+    <p class="js-result"></p>
+    
+    <button onclick="
+    score.wins = 0;
+    score.losses = 0;
+    score.ties = 0;
+    localStorage.removeItem('score');
+    updateScore();
+    ">Reset Score</button>
+    <script src="09-dom.js">
+      
+    </script>
+  </body>
+</html>

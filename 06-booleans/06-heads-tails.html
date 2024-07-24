@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>heads and tails</title>
+</head>
+<body>
+    <script src = '06-booleans.js'></script>
+    <button onclick="
+        playGame(guess)
+    ">heads</button>
+    <button onclick="
+        playGame(guess)
+    ">tails</button>
+    <button onclick="
+        score.wins = 0;
+        score.losses = 0;
+        localStorage.removeItem('score');
+    ">Reset score</button>
+</body>
+</html>

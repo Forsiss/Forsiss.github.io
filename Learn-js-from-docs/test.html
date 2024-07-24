@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="test.js" >
+</head>
+<body>
+    <script src="test.js">
+        /*
+        let firstNumber = prompt("Первое число?", 1);
+        let secondNumber = prompt("Второе число?", 2);
+
+        // alert(Number(firstNumber) + Number(secondNumber));
+        alert(+firstNumber + +secondNumber);
+
+        let a=3,
+        b=2,
+        c=4;
+        let d;
+        let e;
+
+        d= 1 + ++c - (2 + ++a) / b; // d = 3;
+
+        e = (c + b++ + a - d)/2; // 4
+
+        alert(e)
+
+        console.log("2" > "12");
+        */
+        /*
+        let first = "99";
+        second = 100;
+        third = +first++;
+        console.log(third == second);
+        */
+        /*
+        let age = 14;
+        let result = (age >= 14 && age <= 90) ? "Находиться" : "Не находиться";
+        console.log(result);
+        */
+
+
+        /*
+        let loginEnt = prompt("Введите имя пользователя:", '');
+        let passEnt;
+        if (loginEnt == 'админ') {
+            passEnt = prompt('Введите пароль администратора:', '');
+            if (passEnt == 'главный') {
+            alert('Здравствуйте!');
+            } else if (passEnt !== 'главный' && passEnt !== null) {
+            alert('Неверный пароль!');
+            } else if (passEnt == null) {
+            alert('Отменено!');
+            };
+        } else if (loginEnt !== 'админ' && loginEnt !== null) {
+            alert('Я вас не знаю!');
+        } else if (loginEnt == null) {
+            alert('Отменено!');
+        }
+        */
+        /*
+        let num1 = 10,
+            num2 = 20,
+            result;
+        if(result ??= num1){
+            result = num1;
+        } else {
+            result = num2;
+        }
+        console.log(result);
+        */
+
+        /*
+        for(let i = 2; i <= 10; i++){
+            if(i % 2 !== 0)continue;
+            alert(i);
+        };
+
+        let i = 0;
+        while(i < 3){
+            alert(i);
+            i++
+        }
+        */
+        /*
+        let num;
+
+        do {
+            num = prompt("Введите число больше 100?", 0);
+        } while (num <= 100 && num);
+        */
+        /*
+        let n = 10;
+
+        nextPrime:
+        for (let i = 2; i <= n; i++) { // Для всех i...
+
+            for (let j = 2; j < i; j++) { // проверить, делится ли число..
+                if (i % j == 0) continue nextPrime; // не подходит, берём следующее
+            }
+
+            alert( i ); // простое число
+        }
+        */
+
+
+        // replace "switch" with if else
+        /*
+        let browser = prompt('What types of browser we are supporting');
+
+        let result = (browser == "Edge") ? alert("You've got the Edge") : 
+        (browser == "Chrome" ||
+         browser == "Firefox" || 
+         browser == "Safari" || 
+         browser == "Opera") ? alert("Okay we support these browsers too") :
+        alert("We hope that this page looks ok!");
+        */
+        // replace if else with switch
+        /*
+        const number = +prompt("Введите число между 0 и 3", "");
+        console.log(number)
+        switch(number){
+            case 0:
+                alert('Вы ввели число 0');
+                break;
+            case 1:
+                alert('Вы ввели число 1');
+                break;
+            case 2:
+            case 3:
+                alert('Вы ввели число 2, а может и 3');
+                break;
+            default :
+                alert('Вы ввели либо слишком большое, либо слишком маленькое число');
+        }
+        */
+        /*
+        function checkAge(age) {
+            
+            age = prompt('Введите свой возраст');
+            if (age >= 18) {
+              return true;
+            } else {
+                return confirm('Родители разрешили?');
+            };
+            */
+            /*
+            age = prompt("Введите свой возраст");
+            let result = (age >= 18) ? true : 
+            confirm("Родители разрешили?");
+            */
+            /*
+            age = prompt("Введите свой возраст");
+                return (age >= 18) || confirm("Родители разрешили?");
+            
+        }
+        */
+        /*
+            function getMin(a, b){
+                if(a < b){
+                    return a;
+                };
+                if(b < a){
+                    return b;
+                };
+            }
+
+            console.log(getMin(2, -5));
+
+            function getPowerOf(x, n){
+                return x **= n;
+            }
+            console.log(getPowerOf(5, 2));
+        */
+        /*
+        let ask = (question, yes, no) =>{
+            question = (confirm(question)) ? yes() : no();
+        };
+
+        ask(
+            "Вы согласны?",
+            () => { alert("Вы согласились"); },
+            () => { alert("Вы не согласились"); }
+        );
+        */
+        /*
+        let map = function(arr, fn) {
+            for(let i = 0; i < arr.length; ++i){
+                arr[i] = fn(arr[i], i);
+            };
+            return arr;
+        };
+        console.log(map(123, 1));
+
+
+        const argumentsLength = function(...args) {
+            arr = [...args];
+            for(let i = 0; i < arr.length; ++i){
+                return arr.length;
+            };
+        };
+        console.log(argumentsLength());
+        */
+        /*
+        let head = {
+            glasses: 1
+          };
+          
+          let table = {
+            pen: 3,
+            __proto__: head,
+          };
+          
+          let bed = {
+            sheet: 1,
+            pillow: 2,
+            __proto__: table,
+          };
+          
+          let pockets = {
+            money: 2000,
+            __proto__: bed,
+          };
+
+          console.log(pockets.pen);
+          console.log(bed.glasses);
+          console.log(head.glasses);
+          console.log(pockets.glasses);
+          */
+
+          /*
+          let hamster = {
+            stomach: [],
+          
+            eat(food) {
+              this.stomach = [food];
+            }
+          };
+          
+          let speedy = {
+            __proto__: hamster
+          };
+          
+          let lazy = {
+            __proto__: hamster
+          };
+          
+          speedy.eat("apple");
+          alert(speedy.stomach);
+
+          alert(lazy.stomach);
+          */
+
+            /*
+            const products = ["Choo Choo Chocolate", "Icy Mint", "Cake Batter", "Bubblegum"];
+            const last = products.at(-1);
+            alert(last);
+            */
+          /*
+            function sumTo(n){
+                let sum = 0;
+                for(let i = 0; i <= n; i++){
+                    sum += i;
+                };
+                return sum
+            };
+
+            function sumTo2(n){
+                if(n == 1) return 1;
+                return n + sumTo2(n - 1);
+            };
+
+
+            function sumTo3(n){
+                return n * (n + 1)/2;
+            };
+
+            function factorial(n){
+                if(n == 1) return 1;
+                return n * factorial(n - 1);
+            }
+
+            function fib(n) {
+                return n <= 1 ? n : fib(n - 1) + fib(n - 2);
+            };
+            */
+
+            /*
+            let list = {
+                value: 1,
+                next: {
+                  value: 2,
+                  next: {
+                    value: 3,
+                    next: {
+                      value: 4,
+                      next: null
+                    }
+                  }
+                }
+              };
+              
+              function printList(list) {
+                let tmp = list;
+              
+                while (tmp.next.next.next.next) {
+                  alert(tmp.value);
+                  tmp.next = tmp;
+                }
+              
+              }
+              
+              printList(list);
+              
+              function printReverseList(list) {
+                let arr = [];
+                let tmp = list;
+              
+                while (tmp) {
+                  arr.push(tmp.value);
+                  tmp = tmp.next;
+                }
+              
+                for (let i = arr.length - 1; i >= 0; i--) {
+                  alert( arr[i] );
+                }
+              }
+              
+              printReverseList(list);
+              */
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Мяч в поле</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden; /* Скрываем скроллинг */
+    }
+
+    #field {
+      width: 800px;
+      height: 600px;
+      background-color: #008000; /* Зеленый цвет поля */
+      margin: 50px auto;
+      position: relative; /* Для позиционирования мяча */
+      cursor: pointer;
+    }
+
+    #ball {
+      width: 50px;
+      height: 50px;
+      background-color: #ff0000; /* Красный цвет мяча */
+      border-radius: 50%;
+      position: absolute; /* Для позиционирования мяча */
+      transition: 1s all;
+    }
+  </style>
+</head>
+<body>
+  <div id="field">
+    <div id="ball"></div>
+  </div>
+
+  <script>
+    const field = document.getElementById('field');
+    const ball = document.getElementById('ball');
+
+    // Обработчик события клика
+    field.addEventListener('click', (event) => {
+      // Получаем координаты клика относительно поля
+      const x = event.clientX - field.offsetLeft;
+      const y = event.clientY - field.offsetTop;
+
+      // Перемещаем мяч в координаты клика
+      ball.style.left = x - 25 + 'px'; // Отнимаем радиус мяча
+      ball.style.top = y - 25 + 'px'; // Отнимаем радиус мяча
+    });
+  </script>
+</body>
+</html>

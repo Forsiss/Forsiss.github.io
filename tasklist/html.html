@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Угадай число</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Угадай число</h1>
+    <label for="difficultyLevel">Выберите уровень сложности:</label>
+<select id="difficultyLevel">
+  <option value="1-50">Легкий (1-50)</option>
+  <option value="1-100" selected>Средний (1-100)</option>
+  <option value="1-500">Сложный (1-500)</option>
+</select>
+    <input type="number" id="guessInput" placeholder="Введите ваше предположение" min="1" max="100" required>
+    <button id="guessButton">Угадать</button>
+    <p id="result"></p>
+    <p id="attempts">Попытки: 0</p>
+    <button id="playAgain" style="display: none;">Играть ещё раз</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

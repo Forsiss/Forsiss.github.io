@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises</title>
+</head>
+<body>
+    <button class="button">9a</button><p></p>
+    <button class="button2">9b</button><p></p>
+   
+    <button onclick="
+        document.querySelector('.Paragraph')
+            .innerHTML = ('You chose: Heads');
+    ">Heads</button>
+    <button onclick="
+        document.querySelector('.Paragraph')
+            .innerHTML = ('You chose: Tails');
+    ">Tails</button>
+    <p class="Paragraph"></p>
+
+    <p></p>
+
+    
+
+    <input placeholder="Name" class="js-name-input" onkeyup="
+        nameElement = document.querySelector('.js-name-input');
+        nameValue = document.querySelector('.js-message')
+            .innerHTML = `Your name is ${nameElement.value}`;
+        console.log(event.key);
+    ">
+
+    <button onclick="
+        inputElements();
+    ">Submit</button>
+
+<p class="js-message"></p>
+
+    <script src="09-Exercises.js">
+
+    </script>
+</body>
+</html>
